@@ -9,6 +9,8 @@ dependencies {
     compileOnly(libs.android.tools.common)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.compose.gradlePlugin)
+    implementation(libs.buildkonfig.gradlePlugin)
+    implementation(libs.buildkonfig.compiler)
 }
 
 group = "com.example.convention.buildlogic"
@@ -56,6 +58,10 @@ gradlePlugin {
         register("CmpFeature") {
             id = "com.example.convention.cmp.feature"
             implementationClass = "CmpFeatureConventionPlugin"
+        }
+        register("BuildKonfig") {
+            id = "com.example.convention.build.konfig"
+            implementationClass = "BuildKonfigConventionPlugin"
         }
     }
 }
