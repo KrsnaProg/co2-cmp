@@ -13,16 +13,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import org.jetbrains.compose.resources.painterResource
-
 import co2.composeapp.generated.resources.Res
 import co2.composeapp.generated.resources.compose_multiplatform
+import com.example.core.designsystem.theme.CO2Theme
+import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    CO2Theme {
         var showContent by remember { mutableStateOf(false) }
         Column(
             modifier = Modifier
